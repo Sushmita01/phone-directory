@@ -1,0 +1,9 @@
+<div class="container">
+    <header>
+        <app-header></app-header>
+    </header>
+    <section class="main-content">
+        <app-contact-list-container (contactSelectEvent)="contactSelected($event)" [contactNames]="contactNames"></app-contact-list-container>
+        <app-contact-item-details [selectedContact]="selectedContact"></app-contact-item-details>
+    </section>
+</div>

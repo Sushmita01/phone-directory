@@ -1,0 +1,3 @@
+<div class="contact-list" >
+    <app-contact-item *ngFor="let name of contactNames;index as i" (click)="contactSelect(i)" [name]="name"></app-contact-item>
+</div>

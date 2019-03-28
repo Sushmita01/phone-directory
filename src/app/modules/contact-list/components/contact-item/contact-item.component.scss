@@ -1,0 +1,21 @@
+.item-container {
+    width: 100%;
+    height: 60px;
+    padding: 10px 10px 0 10px;
+    box-sizing: border-box;
+    display: flex;
+    background-color: pink;
+    cursor: pointer;
+    .contact-name {
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        border-bottom: 1px grey solid;
+    }
+}
+
+.item-container:hover {
+    background-color: rgb(247, 171, 171);
+}

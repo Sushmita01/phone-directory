@@ -1,1 +1,33 @@
-/* You can add global styles to this file, and also import other style files */
+@import './assets/variables.scss';
+
+html {
+    height: 100vh;
+    margin: 0px;
+    padding: 0px;
+  }
+  body {
+    padding: 0px;
+    margin: 0px;
+  }
+
+  /* width */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px rgb(250, 250, 250); 
+  border-radius: 10px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: white;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #cccccc
+}
