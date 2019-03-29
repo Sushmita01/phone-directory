@@ -1,5 +1,9 @@
 <div class="container">
+  <div (click)="toggle()" class="hamburger">&#9776;</div>
   <label class="input-container">
     <input id="search" width=200 placeholder="Search" (keyup)="searchDirectory($event)">
   </label>
+  <div class="user">
+    <img alt="profile_picture" [src]="profileImage">
+  </div>
 </div>

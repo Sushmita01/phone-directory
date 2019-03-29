@@ -1,6 +1,6 @@
 .card-container {
     display: flex;
-    width: 60%;
+    width: 65%;
     height: 100%;
     flex-direction: column;
     padding: 40px 25px 25px 25px;
@@ -61,7 +61,7 @@
         display: flex;
         background-color: #fffff7;
         border: 1px grey solid;
-        justify-content: space-between;
+        justify-content: space-around;
         border-top-left-radius: 5px;
         border-top-right-radius: 5px;
     }
@@ -79,4 +79,39 @@
     }
 
 
-// @media screen and (min-width: )
+    @media only screen and (min-width: 990px) and (max-width: 1140px) {
+        .card-container {
+            width: 70% !important;
+        }
+      }
+
+    @media only screen and (min-width: 850px) and (max-width: 990px) {
+    .card-container {
+        width: 80% !important;
+    }
+    }
+    @media only screen and (min-width: 800px) and (max-width: 850px) {
+        .card-container {
+            width: 85% !important;
+        }
+        }
+    @media only screen and (min-width: 680px) and (max-width: 800px) {
+        .card-container {
+            width: 70% !important;
+            button {
+                font-size: 18px !important;
+                width: 150px;
+            }
+        }
+        }
+
+    @media only screen and (max-width: 680px) {
+        .card-container {
+            width: 80% !important;
+            button {
+                font-size: 18px !important;
+                width: 150px;
+            }
+        }
+        }
+    

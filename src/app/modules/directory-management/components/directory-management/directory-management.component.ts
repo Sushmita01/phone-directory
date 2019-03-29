@@ -23,6 +23,7 @@ export class DirectoryManagementComponent implements OnInit {
   public contactNames: Array<string>;
   public selectedContact: object;
   public searchString: string = null;
+  public sideBarExpanded: boolean;
 
   constructor(private contactService: GetContactsService, private contactFilter: ContactFilterPipe) { }
 
@@ -51,5 +52,9 @@ export class DirectoryManagementComponent implements OnInit {
     console.log(this.contactNames);
 
  }
+
+//  toggleSideBar($event) {
+//   sideBarExpanded
+//  }
 
 }

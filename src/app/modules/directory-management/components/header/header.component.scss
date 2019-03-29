@@ -1,11 +1,20 @@
 .container {
     position: sticky;
     top: 0px;
+    align-items: center;
+    display: flex;
+    .hamburger {
+        color: white;
+        font-size: 38px;
+        display: none;
+        cursor: pointer;
+    }
     .input-container {
         padding: 5px;
         border-radius: 5px;
         background: white;
         display: flex;
+        height: 40px;
         justify-content: center;
         align-items: center;
         
@@ -17,4 +26,53 @@
         }
         
     }
+
+    .user {
+        display: inline;
+        position: fixed;
+        right: 0px;
+        img {
+        width: 84px;
+        align-self: flex-end;
+        background-color: #fffffff0;
+        border: 2px grey solid;
+        box-sizing: border-box;
+        border-radius: 42px;
+        height: 84px;
+        }
+    }
+
+
 }
+
+
+@media only screen and (max-width: 800px) {
+    .container {
+        display: flex;
+        flex-direction: row;
+    }
+    .hamburger {
+        display: block !important;
+        margin-right: 10px;
+    }
+
+    .input-container {
+        height: 30px !important;
+        
+        input {
+            width: 300px !important;
+        }
+        
+    }
+    .user {
+        right: 5px;
+        img {
+            // display: none;
+            width: 60px !important;
+            height: 60px !important;
+            border-radius: 30px !important;
+    
+            }
+    }
+
+    }

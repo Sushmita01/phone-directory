@@ -25,6 +25,7 @@ header {
     display: flex;
     flex-direction: row;
     overflow: auto;
+
     background-color: beige;
     app-contact-list-container {
         width: 30%;
@@ -40,3 +41,34 @@ header {
         justify-content: center;
     }
 }
+
+
+@media only screen and (max-width: 800px) {
+
+    .hide {
+        display: none;
+    }
+    
+    .show {
+        display: flex;
+    }
+    
+    .main-content {
+        position: relative;
+        // z-index: -1;
+    }
+    app-contact-list-container {
+            position: absolute;
+            left: 0px;
+            z-index: 1;
+            // display: none;
+    }
+    app-contact-item-details {
+        width: 100% !important;
+        // z-index: -1;
+    }
+    app-header {
+        justify-content: space-between;
+    }
+    }
+
