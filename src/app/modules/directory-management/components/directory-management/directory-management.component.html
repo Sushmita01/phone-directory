@@ -1,6 +1,6 @@
 <div class="container">
     <header>
-        <app-header></app-header>
+        <app-header (stringSearch)="directorySearch($event)"></app-header>
     </header>
     <section class="main-content">
         <app-contact-list-container (contactSelectEvent)="contactSelected($event)" [contactNames]="contactNames"></app-contact-list-container>

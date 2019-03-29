@@ -1,0 +1,82 @@
+.card-container {
+    display: flex;
+    width: 60%;
+    height: 100%;
+    flex-direction: column;
+    padding: 40px 25px 25px 25px;
+    .card-upper {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        padding: 20px;
+        border-radius: 5px;
+        background-color: #9f9578;
+        margin-bottom: 20px;
+        .contact-image {
+            img {
+                border-radius: 10px;
+
+            }
+        }
+        .card-upper-right {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            padding-right: 20px;
+            button {
+                background-color: #fbfaf6;
+                color: #36363f;
+                border-radius: 5px;
+                border: none;
+                cursor: pointer;
+                font-family: monospace;
+                font-size: 20px;
+                padding: 10px;
+                width: 200px;
+                height: 50px;
+            }
+            button:hover {
+                background-color: #746e5a;
+                color: white;
+            }
+            .rating {
+                padding: 20px;
+                color: #36363f;
+            }
+
+        }   
+    }
+    .description {
+        font-size: 18px;
+        background-color: #fffff7;
+        font-family: 'Inconsolata', monospace;
+        border: 1px #000000 solid;
+        border-radius: 5px;
+        padding: 10px;
+        margin-bottom: 10PX;
+    }
+    .preferences {
+        padding: 20px;
+        display: flex;
+        background-color: #fffff7;
+        border: 1px grey solid;
+        justify-content: space-between;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+    }
+        table tr {
+            text-align: left;
+            font-family: monospace;
+            th {
+                font-size: 20px;
+                border-bottom: 1px grey solid;
+            }
+            td {
+                font-size: 18px;
+            }
+        }
+    }
+
+
+// @media screen and (min-width: )

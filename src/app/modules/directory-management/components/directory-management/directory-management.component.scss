@@ -7,25 +7,36 @@
 header {
     width: 100%;
     height: 100px;
-    background-color: blue;
-    flex-basis: 100%;;
+    background-color: #36363f;
+    flex-basis: 100%;
+    app-header {
+        align-items: center;
+        height: 100%;
+        justify-content: space-around;
+        display: flex;
+    }
 }
 
 
 .main-content {
     width: 100%;
-    height: 100%;
+    height: calc(100% - 100px);
+    flex-grow: 1;
     display: flex;
     flex-direction: row;
+    overflow: auto;
+    background-color: beige;
     app-contact-list-container {
         width: 30%;
         height: 100%;
+      
     }
     
     
     app-contact-item-details {
         width: 70%;
         height: 100%;
-        background-color: gray;
+        display: flex;
+        justify-content: center;
     }
 }

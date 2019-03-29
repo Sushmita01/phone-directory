@@ -1,3 +1,5 @@
 <div class="container">
-  <input id="search" placeholder="Search" [value]="searchString">
+  <label class="input-container">
+    <input id="search" width=200 placeholder="Search" (keyup)="searchDirectory($event)">
+  </label>
 </div>

@@ -8,7 +8,7 @@ import { Component, OnInit, OnChanges, Input, Output,EventEmitter } from '@angul
 export class ContactListContainerComponent implements OnInit, OnChanges {
 @Input() contactNames;
 @Output() contactSelectEvent : EventEmitter<number> = new EventEmitter();
-
+public selected: number;
   constructor() { }
 
   ngOnInit() {
@@ -16,11 +16,12 @@ export class ContactListContainerComponent implements OnInit, OnChanges {
 
 
   ngOnChanges() {
-    console.log(this.contactNames);
   }
 
   contactSelect(index) {
+    this.selected=index;
     this.contactSelectEvent.emit(index);
+
   }
 
 }

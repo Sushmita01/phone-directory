@@ -1,22 +1,39 @@
-<div *ngIf="selectedContact" class="container">
-  <div class="contact-image"><img alt="contact image" [src]="selectedContact.img"></div>
-  <button>Send Message</button>
-  <div class="rating">{{selectedContact.rating}}</div>
-  <div class="description">{{selectedContact.Description}}</div>
-  <table class="likes">
-    <tr>
-      <th>Likes</th>
-    </tr>
-    <tr *ngFor="let like of selectedContact.Likes">
-      <td>{{like}}</td>
-    </tr>
-  </table>
-  <table class="dislikes">
+<div *ngIf="selectedContact" class="card-container">
+  <div class="card-upper">
+    <div class="contact-image"><img alt="contact image" [src]="imageUrl"></div>
+    <div class="card-upper-right">
+      <button>Send Message</button>
+      <div class="rating">
+          <div style="display: inline-block" *ngFor="let starred of stars; let i = index">
+            <ng-container *ngIf="starred; else noStar">
+              <mat-icon class="filled">star</mat-icon>
+            </ng-container>
+            <ng-template #noStar>
+              <mat-icon class="empty">star_outline</mat-icon>
+            </ng-template>
+          </div>
+
+      </div>
+    </div>
+  </div>
+  <div class="description">{{description}}</div>
+  <div class ="preferences">
+    <table class="likes">
       <tr>
-        <th>Disikes</th>
+        <th>Likes</th>
       </tr>
-      <tr *ngFor="let dislike of selectedContact.Dislikes">
-        <td>{{dislike}}</td>
+      <tr *ngFor="let like of likes">
+        <td>{{like}}</td>
       </tr>
     </table>
+    <table class="dislikes">
+        <tr>
+          <th>Disikes</th>
+        </tr>
+        <tr *ngFor="let like of likes">
+          <td>{{like}}</td>
+        </tr>
+      </table>
+  </div>
+  
 </div>

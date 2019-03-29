@@ -7,6 +7,13 @@ import { Component, OnInit,OnChanges, Input} from '@angular/core';
 })
 export class ContactItemDetailsComponent implements OnInit, OnChanges {
   @Input() selectedContact: object = null;
+  imageUrl : string;
+  rating: number;
+  description: string;
+  name: string;
+  likes: Array<string>;
+  dislikes: Array<string>;
+  stars: boolean[] = new Array(5);
 
   constructor() { }
 
@@ -14,7 +21,24 @@ export class ContactItemDetailsComponent implements OnInit, OnChanges {
   }
 
   ngOnChanges() {
-    console.log(this.selectedContact);
+    if (this.selectedContact) {
+      this.name = this.selectedContact["name"];
+      this.imageUrl = this.selectedContact["img"];
+      this.rating = this.selectedContact["rating"];
+      this.description = this.selectedContact["Description"];
+      this.likes = this.selectedContact["Likes"];
+      this.dislikes = this.selectedContact["Disikes"];
+      this.fillRatingStars();   
+    }
+ }
+
+
+
+ fillRatingStars() {
+  this.stars.fill(false);
+  for (let i=0;i<this.rating;i++) {
+    this.stars[i]=true;
   }
+}
 
 }

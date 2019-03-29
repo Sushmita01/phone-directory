@@ -6,11 +6,11 @@ import { Pipe, PipeTransform } from '@angular/core';
 export class ContactFilterPipe implements PipeTransform {
 
   transform(value: any[], searchTerm?: string): any {
-    console.log("hit piper",value)
     if (searchTerm) {
-        let returnArr = value;
+      console.log(searchTerm);
+        let returnArr = [];
         value.map((contact)=> {
-          if (contact.name.indexOf(searchTerm)!=-1) {
+          if (contact.name.toLowerCase().startsWith(searchTerm.toLowerCase())) {
             returnArr.push(contact);
           }
         });
